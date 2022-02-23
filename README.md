@@ -1,2 +1,4 @@
-# web-portfolio
-For ITMO university Web courses.
+# Веб-портфолио
+## Автор: Дерябин Андрей P41081
+
+## Ссылка: todo
