@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task - anchors and contrast</title>
+        <style>
+            body {
+                font-size: 30px;
+            }
+            body.dark {
+                background-color: #000;
+                color: #FFF;
+            }
+            #links {
+                background-color: #000;
+                color: #FFF;
+                padding: 10px;
+            }
+            body.dark div#links {
+                background-color: #FFF;
+                color: #000;
+            }
+            a {
+                color: inherit;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>Lorem IPSUM</div>
+            <div id="links">
+                <a href="#dark">DARK</a>
+                <a href="#light">LIGHT</a>
+            </div>
+        </div>
+        <script>
+            function applyTheme() {
+                if (document.body.classList.contains('dark') && document.location.hash !== '#dark')
+                    document.body.classList.toggle('dark');
+                if (!document.body.classList.contains('dark') && document.location.hash === '#dark')
+                    document.body.classList.toggle('dark');
+            }
+
+            applyTheme();
+            addEventListener('hashchange', () => {
+                applyTheme();
+                // console.log(document.location.hash);
+            })
+        </script>
+    </body>
+</html>
