@@ -4,6 +4,7 @@ body {
     --color-primary: #FFC888;
     --color-primary-dark: #A58059;
     --color-secondary: #8039AD;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 * {
