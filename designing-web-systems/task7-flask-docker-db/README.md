@@ -1,4 +1,4 @@
-# Проектирование информационных систем: задание 5
+# Проектирование информационных систем: задание 7
 
 Собрать образ из Dockerfile:
 ```
@@ -41,3 +41,8 @@ docker stop <container_id>
 ```
 docker ps
 ```
+
+
+Пример работы:
+![image](https://user-images.githubusercontent.com/2338967/201990239-ecb68bd4-b8ef-4894-b9d4-e9b6c1527f50.png)
+
