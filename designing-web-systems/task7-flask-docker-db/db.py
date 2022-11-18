@@ -29,7 +29,7 @@ def get_stats():
     data = cur.fetchall()
     cur.close()
     conn.close()
-    return f'total visits: {data[0][2]}, last one on {data[0][0]} by {data[0][1]}'
+    return f'total visits: {data[0][2]}, last one on {data[0][0]} by {data[0][1]}' if data and len(data) > 0 and len(data[0]) > 1 else 'total visits: 0'
 
 
 def increment_and_get_stats(client_info: str):
