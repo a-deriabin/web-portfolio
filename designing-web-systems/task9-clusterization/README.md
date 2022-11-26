@@ -39,3 +39,24 @@ docker stack rm web-swarm
 docker service rm web-swarm
 docker swarm leave --force
 ```
+
+## Сравнение с Kubernetes
+
+В случае использования Kubernetes, процесс был бы очень схожим.
+
+Инициализация:
+
+`sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=[NODE_IP_ADDRESS]`
+
+Настройка сети:
+
+`kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml`
+
+Создание worker nodes:
+
+`kubeadm token create`
+
+Docker Compose можно автоматически конвертировать в набор Kubernetes-файлов конфигурации для каждого из сервисов:
+`kompose convert -f docker-compose.yaml`
+
+На мой взгляд, Docker Swarm выглядит проще для изучения и начала работы, однако, Kubernetes имеет более богатый инструментарий и, возможно, более удобен для сложных задач.
